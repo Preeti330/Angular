@@ -41,8 +41,6 @@ export class ExcelTempleteComponent implements OnInit {
   // new Workbook();
   // const workbook = new Excel.Workbook();
   }
-
-  
  
 
 }
