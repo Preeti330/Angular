@@ -1,0 +1,322 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+        Forms And  Validation
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+          Create a form and convert to reactive form for validations 
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="row bg-white text-dark border-bottom mt-2">
+  
+      <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+  
+        <h2 class="headers">
+          Description
+        </h2>
+  
+        <div class="description">
+          <div class="text">
+            <p>
+              Forms are used in various seniors of buissiness applictaion.for registarion.login,update,etc
+            
+            <br>We have two kind of forms in angular <b>Reactive forms and Templete Driven Forms</b>
+            <br>
+            
+            </p>
+  
+            <ul>
+                <li>
+                    <b>Data Flow In Reactive</b>
+                    <ul>
+                        <li>
+                            <b>View To Model : </b> data folw from view to model using formControl for every input feild.
+                        </li>
+                        <li>
+                            <b>Model To View : </b> we can set data to view using setValue (its manditory to set all the feilds in form)or PatchValue (To set only some particular feild of form )
+                        </li>
+                    </ul>
+                </li>
+              <li>
+  
+                  to use forms the very first thing import reative forms in app.module.ts file,and also in component.ts file import FormControl,FormBuilder of Form etc 
+                
+              <li>
+                And angular forms have 
+                <ul>
+                  <li>
+                    <b><i>form-control : </i></b>  which takes care of input feild , what ever the input user enters that get store in model using <i><b>fromControlName</b></i>
+                    having multiple form controler which all togther helps 
+                  </li>
+                  <li>
+                    <b><i>form-group : </i></b> which is collection of formcontrol , which has control over a from-control.
+                  </li>
+                  <li>
+                    <b><i>ngModel : </i></b> is use to directly bind the value from both view and model.
+                  </li>
+                  <li>
+                    <b><i>ngSubmit: </i></b> which submit the form with all the data of forms.
+                  </li>
+                  <li>
+                    we have load the form value before we submit the form and then after we can add submit forms by appending the values.
+                  </li>
+                  
+                </ul>
+              </li>
+            </ul>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  </div>
+
+  <div class="row bg-white text-dark border-bottom" style="padding-bottom: 100px;" >
+
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+       <h1 class="headers">
+        Source Code
+      </h1>
+    </div>
+  
+    <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+        <div class="header">
+            <h2 class="headers">
+                Login Form 
+            </h2>
+        </div>
+        <div class="description">
+            <div class="text"> 
+             <label style="font-size: 18px;font-weight: 500;font-family: system-ui;margin-top: 2%;">Example :</label>
+            <div class="exmaple" *ngIf="condition" >
+              <video id="video-6" class="video-bg text-center" width="300" height="300" controls autoplay >
+                <source src="assets\loginform.mp4" type="video/mp4">
+            </video>
+            </div>
+            <button (click)=OnClick() class="button btn btn-primary" >
+              <i class="fa-regular fa-eye" *ngIf="view"></i>  
+              <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+            </button>
+            </div>
+           
+          </div>
+        <label ><span style="color: black;margin-top: 2%;">In this login form take username and pwd from user and validate and send to api (or validate here itself) </span>
+            <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('databindingid')"  *ngIf="loginIcon"></i>
+            <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('databindingid')" *ngIf="!loginIcon"></i>
+        </label>
+      <div class="description" *ngIf="loginTab">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">app.modules.ts</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">login.component.ts</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">login.component.cscs</button>
+  
+            <button class="nav-link" id="nav-scss-tab" data-bs-toggle="tab" data-bs-target="#nav-scss" type="button" role="tab" aria-controls="nav-scss" aria-selected="false">html</button>
+           
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+  
+  
+            <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+  
+              <button (click)="copyText(modulets)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+              <span id="codesinppetbutton"></span>
+  
+              <pre class="text-left"> 
+                <code [innerHTML]="modulets"></code>
+              </pre>
+              
+            </div>
+          </div>
+          <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+  
+            <button (click)="copyText(logincomponentts)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+              <span id="codesinppetbutton"></span>
+  
+              <pre>
+                <code [innerHTML]="logincomponentts"></code>
+              </pre>
+  
+          </div>
+          <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+  
+            <button (click)="copyText(logincomponentcscs)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+              <span id="codesinppetbutton"></span>
+  
+              <pre>
+                <code [innerHTML]="logincomponentcscs"></code>
+              </pre>
+          </div>
+  
+          <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-scss" role="tabpanel" aria-labelledby="nav-scss-tab" tabindex="0">
+  
+            <button (click)="copyText(cssscode)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+  
+            <!-- <pre>
+              <code [innerHTML]="cssscode"></code>
+            </pre> -->
+            {{loginhtml}}
+  
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+      <div class="header">
+          <h2 class="headers">
+              Upload A File Form 
+          </h2>
+      </div>
+      <div class="description">
+          <div class="text"> 
+           <label style="font-size: 18px;font-weight: 500;font-family: system-ui;margin-top: 2%;">Example :</label>
+          <div class="exmaple" *ngIf="condition" >
+            <video id="video-6" class="video-bg text-center" width="300" height="300" controls autoplay >
+              <source src="assets\upload.mp4" type="video/mp4">
+          </video>
+          </div>
+          <button (click)=OnClick() class="button btn btn-primary" >
+            <i class="fa-regular fa-eye" *ngIf="view"></i>  
+            <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+          </button>
+          </div>
+         
+        </div>
+      <label ><span style="color: black;margin-top: 2%;">In this login form user can select a campagin and upload a file along with modal </span>
+          <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('upload_id')"  *ngIf="uploadIcon"></i>
+          <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('upload_id')" *ngIf="!uploadIcon"></i>
+      </label>
+    <div class="description" *ngIf="uploadTab">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home1" type="button" role="tab" aria-controls="nav-home1" aria-selected="true">login.component.ts</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile1" type="button" role="tab" aria-controls="nav-profile1" aria-selected="false">login.component.html</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact1" type="button" role="tab" aria-controls="nav-contact1" aria-selected="false">login.component.html</button>
+
+         
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+        <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+
+          <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+
+            <button (click)="copyText(uploadFormts)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre class="text-left"> 
+              <code [innerHTML]="uploadFormts"></code>
+            </pre>
+            
+          </div>
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+
+          <button (click)="copyText(uploadhtmlClick)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+           <p>{{uploadhtmlClick}}</p>
+
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact1" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+
+          <button (click)="copyText(uploadFormhtml)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <p>{{uploadFormhtml}}</p>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+    <div class="header">
+        <h2 class="headers">
+            Update  Form 
+        </h2>
+    </div>
+    <div class="description">
+        <div class="text"> 
+         <label style="font-size: 18px;font-weight: 500;font-family: system-ui;margin-top: 2%;">Example :</label>
+        <div class="exmaple" *ngIf="condition" >
+          <video id="video-6" class="video-bg text-center" width="300" height="300" controls autoplay >
+            <source src="assets\update.mp4" type="video/mp4">
+        </video>
+        </div>
+        <button (click)=OnClick() class="button btn btn-primary" >
+          <i class="fa-regular fa-eye" *ngIf="view"></i>  
+          <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+        </button>
+        </div>
+       
+      </div>
+    <label ><span style="color: black;margin-top: 2%;">In this login form user can select a campagin and upload a file along with modal . <br>
+    if we are uploading any images/file then we use append form else , directly send form.values to api
+    </span>
+        <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('update_id')"  *ngIf="updateIcon"></i>
+        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('update_id')" *ngIf="!updateIcon"></i>
+    </label>
+  <div class="description" *ngIf="updateTab">
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home2" type="button" role="tab" aria-controls="nav-home2" aria-selected="true">login.component.ts</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile2" type="button" role="tab" aria-controls="nav-profile2" aria-selected="false">login.component.html</button>
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact2" type="button" role="tab" aria-controls="nav-contact2" aria-selected="false">login.component.html</button>
+
+       
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+      <div class="tab-pane fade show active" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+
+        <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+
+          <button (click)="copyText(updateFormts)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+          <span id="codesinppetbutton"></span>
+
+          <pre class="text-left"> 
+            <code [innerHTML]="updateFormts"></code>
+          </pre>
+          
+        </div>
+      </div>
+      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+
+        <button (click)="copyText(updateFormhtml)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+          <span id="codesinppetbutton"></span>
+
+         <p>{{updateFormhtml}}</p>
+
+      </div>
+      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+
+        <button (click)="copyText(updateFromHtmlClick)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+          <span id="codesinppetbutton"></span>
+
+          <p>{{updateFromHtmlClick}}</p>
+      </div>
+     
+    </div>
+  </div>
+  </div>
+
+
+
+  </div>

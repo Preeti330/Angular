@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+.header{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 200;
+    padding-top: 20px;
+}
+
+.background{
+    height: 100vh;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.headers{
+    font-weight: 500;
+      font-size: 24px;
+      font-family: serif;
+  }
+  .description{
+    font-size: 16px;
+      font-family: fangsong;
+      font-weight: 100;
+  }
+  
+  .text{
+    font-size: 18px;
+    font-family: system-ui;
+    font-weight: 100;
+    width: 900px;
+  }
+  
+  .button{
+    // text-align: center;
+    //   align-items: center;
+    //   justify-content: center;
+      margin-left: 43%;
+      margin-bottom: 4px;
+      width: 150px;
+  
+  }
+  
+  .exmaple{
+    text-align: center;
+  }
+  
+  .sinppet{
+    margin: auto;
+  }
+  
+  .codesinppet{
+    padding-left: 3px;
+  }

@@ -1,0 +1,134 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+        Routing
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+          To handel the navigation from one view to another we use the angular routing
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+</div>
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+
+          <ul>
+            <li>
+                application get loads with <b> index.html</b><br>
+                which has <b>{{base}}</b> helps to components how to navigate with url ,<br>
+                and <b>{{app}}</b> which is the main root link for navigation
+                
+            </li>
+            <li>
+              app.module.ts file we import the appRouting module . and all the components list in declartion tag.
+            </li>
+            <li>  
+                app-routing.module.ts which has <b>router=[]</b> here we declare all the routing paths
+              <ul>
+                <li>
+                  <b><i>{{routerDirective}} : </i></b> available form router pacakge and routing goes form here .
+                </li>
+                <li>
+                  <b><i>routerLink : </i></b> takes the link which is defined in router array and based on url its navigates
+                </li>
+                <li>
+                  <b><i>routerLinkActive : which hold the active class and we can define styles for it</i></b> 
+                </li>
+                <li>
+                  <b><i>path : </i></b> path of component
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Child Routing </b><br>
+                 Some routes may view in only other routes that cases we use child routing.
+                 <br>
+                Example : after navigationg to listEmploee we need over view and concat info this should to navigate after the navigation to listEmployee.
+                <div class="answer bg-light border-bottom" style="padding-left: 20px;"  >
+                  <pre>
+                    <code [innerHtml]="childroute">
+                    </code>
+                   </pre>
+
+                </div>
+             
+               
+            </li>
+            <li>
+              <b>Lazy Loading</b><br>
+              the very first time server get loads along with all the componnent we listed in app.module.ts get loads this includes a lot of data loads from server . to avoid this load the only need modules and then navigate . this concept using in admin panels
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+
+
+<div class="row bg-white text-dark border-bottom" style="padding-bottom: 100px;" >
+
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+       <h1 class="headers">
+        Source Code
+      </h1>
+    </div>
+  
+    <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+      <!-- <h1 class="headers">
+        Source Code
+      </h1> -->
+      <div class="description">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">app-routing.modules.ts</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">app.module.ts</button>
+           
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+  
+  
+            <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+  
+              <button (click)="copyText(modulets)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+              <span id="codesinppetbutton"></span>
+  
+              <pre class="text-left"> 
+                <code [innerHTML]="modulets"></code>
+              </pre>
+              <!-- <p>
+                {{code}}
+              </p> -->
+            </div>
+          </div>
+          <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+  
+            <button (click)="copyText(routingmodulets)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+              <span id="codesinppetbutton"></span>
+  
+              <pre>
+                <code [innerHTML]="routingmodulets"></code>
+              </pre>
+  
+          </div>
+         
+        </div>
+      </div>
+    </div>
+</div>

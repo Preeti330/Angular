@@ -1,0 +1,166 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+       Services
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+          services are use to keep a code or function in one place.
+        </p>
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+                services are use for running a code or function , for example lets take http inbuild service , where if i include this in controler to load server data .i cant use this same in other controler so here if i have kept this in services it is easy to maintain as well test and reuse , so using service we can run a single functions and also i can say its use for separting concerns 
+            </li>
+            <li>
+                We can create services using 
+              <ul>
+                <li>
+                  <b><i>Factory : </i></b> First we define a factory then asigin method to it , we can assign a single method or multiple and its return a componet/variable or entire method 
+
+                  <div class="question">
+                    <label ><span >Exacmple </span>
+                        <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('diid')"  *ngIf="dIIcon"></i>
+                        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('diid')" *ngIf="!dIIcon"></i>
+                    </label>
+                    <div class="answer bg-light border-bottom" *ngIf="dIAnswer" id="diid">
+                      
+                        <pre>
+                            <code [innerHtml]="factory"></code>
+                        </pre>
+                       
+                    </div>
+                </div>
+
+                </li>
+                <li>
+                  <b><i>Service : </i></b> first we define serice and assigin method and it can be take the privious defined methods , and its return a method itslef 
+
+                  <div class="question">
+                    <label ><span >Exacmple </span>
+                        <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('service_id')"  *ngIf="serciveIcon"></i>
+                        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('service_id')" *ngIf="!serciveIcon"></i>
+                    </label>
+                    <div class="answer bg-light border-bottom" *ngIf="serciveAnswer" id="diid">
+                      
+                        <pre>
+                            <code [innerHtml]="sercive"></code>
+                        </pre>
+                       
+                    </div>
+                </div>
+                </li>
+
+                <li>
+                  create folder in src/app as services/https and here create a service.ts as api-configration 
+                </li>
+                <li>
+                  to use the services file we need to add them in app.module.ts file of provider[] or else we can use of Injectable([ "provider":'root'})
+                </li>
+                <li>
+                  and also Injectable import it form angular/core 
+                </li>
+                <li>
+                  define any variables or function that can be useable in any other controller
+                </li>
+                <li>
+                  by importing this file and define that in consturactor.
+                </li>
+                
+            
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom" style="padding-bottom: 100px;" >
+
+  <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+     <h1 class="headers">
+      Source Code
+    </h1>
+  </div>
+
+  <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+    <!-- <h1 class="headers">
+      Source Code
+    </h1> -->
+    <div class="description">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">api.module.ts</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">api-configration.services.ts</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">app.component.ts</button>
+
+          <!-- <button class="nav-link" id="nav-scss-tab" data-bs-toggle="tab" data-bs-target="#nav-scss" type="button" role="tab" aria-controls="nav-scss" aria-selected="false">app.module.component.csss</button> -->
+         
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+
+          <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+
+            <button (click)="copyText(appmodulets)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre class="text-left"> 
+              <code [innerHTML]="appmodulets"></code>
+            </pre>
+            <!-- <p>
+              {{code}}
+            </p> -->
+          </div>
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+
+          <button (click)="copyText(apiconfigts)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre>
+              <code [innerHTML]="apiconfigts"></code>
+            </pre>
+
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+
+          <button (click)="copyText(apiservicets)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre>
+              <code [innerHTML]="apiservicets"></code>
+            </pre>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="row background px-4 py-3">
+    <div class="col-8 col-4 bg-success bg-opacity-50 text-center text-black ">
+
+        <div class="text" style="margin: auto auto;padding-top: 30%;">
+            <h2 class="textAlignment">Angular</h2>
+        </div>
+
+    </div>
+    <div class="col-4 text-left py-20 pt-20" style="padding-top: 50px;">
+
+        <h5 class="text-black header" >Well Come To My WebSite</h5>
+        <h5 class="text-black header">Login To Angular </h5>
+        <form  [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" >
+            <div class="form-group">
+                <label class="text-normal text-dark">UserName</label>
+                <input type="text" class="form-control" formControlName="username" [class.is-invalid]="loginForm.get('username').touched && loginForm.get('username').invalid"  [(ngModel)]="name">
+                <span *ngIf="loginForm.get('username').touched && loginForm.get('username').invalid" class="invalid-feedback">Please Enter Username</span>
+            </div>
+            <div class="form-group">
+                <label class="text-normal text-dark">Password</label>
+                <input type="password" class="form-control" formControlName="pwd" [class.is-invalid]="loginForm.get('pwd').invalid && loginForm.get('pwd').touched">
+
+                <span *ngIf="loginForm.get('pwd').touched && loginForm.get('pwd').invalid" class="invalid-feedback">Please Enter Password</span>
+            </div>
+
+          
+                <!-- <div class="form-control"> -->
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px;" >Submit</button>
+             
+     
+           </form>
+
+           <!-- {{loginFrom.value | json}} -->
+
+
+
+
+    </div>
+</div>

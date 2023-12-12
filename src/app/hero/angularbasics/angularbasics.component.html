@@ -1,0 +1,305 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+        Angular Basics
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+          Angular Basics stracture
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <ul>
+            <li>
+
+                <span>
+                    <b>
+                        Angular is single page application,(i.e its uses ngModule Component to route and it can easily passes data from one component to other)
+
+                    </b>
+                </span>
+                
+                by this feacture pages get loads easily on browser.(i.e it loads only one html page)
+            </li>
+            <li>
+                <div class="question">
+                    <!-- <h5>What Is Angular </h5> -->
+                    <label ><span style="color: darkred">What Is angular ??</span>
+                        <!-- <i >ooo</i> -->
+                        <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('angularid')"  *ngIf="showDownIcon"></i>
+                        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('angularid')" *ngIf="!showDownIcon"></i>
+                    </label>
+                    <div class="answer bg-light border-bottom" *ngIf="showAnswer" id="angularid" >
+                        Angular is single page application provided by JS,and its run in browser and it uses Type Scripts for randering the data between components. 
+
+                    </div>
+                </div>
+               
+            </li>
+
+            <li>
+                <div class="question">
+                    <label ><span style="color: darkred">What Is NgModules ?? </span>
+                        <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('ngmodelid')"  *ngIf="ngModuleIcon"></i>
+                        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('ngmodelid')" *ngIf="!ngModuleIcon"></i>
+                    </label>
+                    <div class="answer bg-light border-bottom" *ngIf="ngModuleAnswer" id="ngmodelid">
+                        NgModules contatins set of organized componnets and ngModules provides functional set, i.e NgModules have templets where we defines a logic or flow of program 
+                        and in services we can build the functions that can be injected using DI(dependency injection) and can be reusebale  
+
+                    </div>
+                </div>
+               
+            </li>
+
+            <li>
+              <div class="question">
+                  <label ><span style="color: darkred">What Module ??</span>
+                      <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('moduleid')"  *ngIf="moduleIcon"></i>
+                      <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('moduleid')" *ngIf="!moduleIcon"></i>
+                  </label>
+                  <div class="answer bg-light border-bottom" *ngIf="moduleAnswer" id="moduleid">
+                      Modules is collection or group of services,component,pipes,decortor.
+                      Module should conatin atleast one component,modules defines a function for example :  app-route-module.ts which helps for routings. and modules class start with ngModule decorative , and also we list imported modules in imports[] and components in declarations. 
+
+                  </div>
+              </div>
+          </li>
+
+          <li>
+            <div class="question">
+                <label ><span style="color: darkred">What Is Component ?? </span>
+                    <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('componentid')"  *ngIf="componentIcon"></i>
+                    <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('componentid')" *ngIf="!componentIcon"></i>
+                </label>
+                <div class="answer bg-light border-bottom" *ngIf="componentAnswer" id="moduleid">
+                    Component is typescript which starts @Components() decortor and its conations methods and class and html where we can desigin and view the target . <br>
+                    APP-Component is root componet , where application get loads from selctor of app.component.ts as [app-root]<br>
+                    Example : lets take YouTube Panel which is having sidebar, serach as header componet and data display as body components . 
+                    we diveded the a page as three components here and here data flows from one componet to others this all subcomponets get loadeded by root copponent.
+                    
+                </div>
+            </div>
+        </li>
+
+
+        <li>
+          <div class="question">
+              <label ><span style="color: darkred">What Is DataBinding ?? </span>
+                  <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('databindingid')"  *ngIf="databindingIcon"></i>
+                  <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('databindingid')" *ngIf="!databindingIcon"></i>
+              </label>
+              <div class="answer bg-light border-bottom" *ngIf="dataBindingAnswer" id="databindingid">
+                 Here we directly add the values to UI component from Scource(ts file).<br>
+                 this enables the developers to prevent slow rendering.
+                 <ol>
+                  <li>
+                     <b>One Way Data Binding /String Interpolation</b><br>
+                     by using {{data}} we bind the data . the data coming in {{data}} is always a string so this can't be helpful in expressions<br>
+                     Example : lets disable the input feild if we use the property  its make complication, so instated of Interpolation use property binding
+                     
+                     <div class="description">
+                      <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">html</button>
+                          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">app.component.ts</button>
+                         
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                
+                
+                          <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+                
+                            <button (click)="copyText(code)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                            <span id="codesinppetbutton"></span>
+                
+                            <!-- <pre class="text-left">
+                              <code [innerHTML]="code"></code>
+                            </pre> -->
+                            <p>
+                              {{code}}
+                            </p>
+                            
+                          </div>
+                        </div>
+                        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+                
+                          <button (click)="copyText(tscode)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                            <span id="codesinppetbutton"></span>
+                
+                            <pre>
+                              <code [innerHTML]="tscode"></code>
+                            </pre>
+                
+                        </div>
+                       
+                       
+                      </div>
+                    </div>
+                     
+                  </li>
+                  <li>
+                    <b>Two Way Data Binding</b><br>
+                    it mainly use in angualr forms , two take data form user and bind to property we use ngModel or two way binding.
+                    or we can use it  to display data source file in templet also
+                    <br>
+                    its combination of property binding -> data flow form class to templet using "[ ]"
+                    <br>
+                    and Event binding -> data flow form templete to class using "( )"
+
+                    <div class="description">
+                      <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home2" type="button" role="tab" aria-controls="nav-home2" aria-selected="true">html</button>
+                          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile2" type="button" role="tab" aria-controls="nav-profile2" aria-selected="false">app.component.ts</button>
+                         
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                        <div class="tab-pane fade show active" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                
+                
+                          <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+                
+                            <button (click)="copyText(twowayCode)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                            <span id="codesinppetbutton"></span>
+                
+                            <!-- <pre class="text-left">
+                              <code [innerHTML]="code"></code>
+                            </pre> -->
+                            <p>
+                              {{twowayCode}}
+                            </p>
+                            
+                          </div>
+                        </div>
+                        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+                
+                          <button (click)="copyText(twowaytscode)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                            <span id="codesinppetbutton"></span>
+                
+                            <pre>
+                              <code [innerHTML]="twowaytscode"></code>
+                            </pre>
+                
+                        </div>
+                       
+                       
+                      </div>
+                    </div>
+                 
+                    
+                 </li>
+
+                 <li>
+                  <b>Class Binding</b><br>
+                  class binding is use to apply the class property to html tag.
+                  <br>
+                  define class style property you want apply in .ts file and in htm tag 
+                  <h7 [class]="className">  [class]=className </h7><br>
+                  and also we can use [class] by validating as 
+                  <h7 [class.text-danger]="hasError">[class.text-danger]="hasError"</h7>
+                  if condation is true then it applys .<br>
+                  in case of applying multiple class styles use ngClass 
+                  as <h7 [ngClass]="styleClass">[ngClass]="styleClass"</h7>
+                 
+
+                  <div class="description">
+                    <nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home3" type="button" role="tab" aria-controls="nav-home3" aria-selected="true">html</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile3" type="button" role="tab" aria-controls="nav-profile3" aria-selected="false">app.component.ts</button>
+                       
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                      <div class="tab-pane fade show active" id="nav-home3" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              
+              
+                        <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+              
+                          <button (click)="copyText(classbinding)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <!-- <pre class="text-left">
+                            <code [innerHTML]="code"></code>
+                          </pre> -->
+                          <p>
+                            {{classbinding}}
+                          </p>
+                          
+                        </div>
+                      </div>
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile3" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+              
+                        <button (click)="copyText(classbindingts)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <pre>
+                            <code [innerHTML]="classbindingts"></code>
+                          </pre>
+              
+                      </div>
+                     
+                     
+                    </div>
+                  </div>
+               
+                  
+               </li>
+                 </ol>
+
+                  
+              </div>
+          </div>
+      </li>
+
+      <li>
+        <div class="question">
+            <label ><span style="color: darkred">What Is DI(dependency ingection) ?? </span>
+                <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('diid')"  *ngIf="dIIcon"></i>
+                <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('diid')" *ngIf="!dIIcon"></i>
+            </label>
+            <div class="answer bg-light border-bottom" *ngIf="dIAnswer" id="diid">
+               DI is class  which recives a dependency form external resource rather then creating itself<br>
+               lets take car,engine,tyre class where to create car we need engine and tyre 
+               <pre>
+                <code [innerHtml]="carclass">
+                </code>
+               </pre>
+
+               in the above class , in future engine class is taking a parameter to define engine type , so here when we in the above stracture when we make changes in engine constrctor to accept the parm its shows error in other class , so we have modify every where . 
+               <br> 
+               To avoid this in agular uses DI where dependency are recived form extranal resource
+               <br>
+               <pre><code [innerHtml]="carclassid"></code></pre>
+               here we can the depency form golbal variables to local variables of constructor. we are assgining the local values to class variables(global variables) by doing this we can say the global var depends on local. 
+                
+            </div>
+        </div>
+    </li>
+            
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>

@@ -1,0 +1,170 @@
+<div class="row bg-white text-dark border-bottom">
+  <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+    <h1 class="headers">
+      Side Bar
+    </h1>
+    <div class="description">
+      <!-- <div class="text"> -->
+      <p>
+        Using Anglar Metarial Build Angular Side Bar.
+      </p>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+
+              To use angular material add angular material to current project <b><span>ng add @angular/material
+                </span></b>
+              And Import Mat Component in app.modules.ts file
+            </li>
+            <li>
+              And angular material has component to develop the menu list
+              <ul>
+                <li>
+                  <b><i>mat-sidenav-container : </i></b> acts as container for side nav and content
+                </li>
+                <li>
+                  <b><i>mat-sidenav-content : </i></b> represents main contents(and routing path can be loadded here)
+                </li>
+                <li>
+                  <b><i>mat-sidenav : </i></b> repesents the side content (menu list ) , by using #sidenav we can toggle
+                  the menu and also to make side moment of menu "mode=side" and to keep open for default use opened="ture"
+                </li>
+                <li>
+                  <b><i>mat-nav-list : </i></b> use to list the all menu items using mat-item-list
+                </li>
+                <li>
+                  <b><i>mat-toolbar : </i></b> to design toolbar it uses mat-toolbar-row
+                </li>
+                <li>
+                  <b><i>mat-icon-button & mat-icon: </i></b> to design button
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+
+<div class="row bg-white text-dark border-bottom">
+  <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+    <div class="description">
+      <div class="text"> 
+       <label style="font-size: 18px;font-weight: 500;font-family: system-ui;">Example :</label>
+      <div class="exmaple" *ngIf="condition" >
+        <video id="video-6" class="video-bg text-center" width="300" height="300" controls autoplay >
+          <source src="assets\sidebar.mp4" type="video/mp4">
+      </video>
+      </div>
+      <button (click)=OnClick() class="button btn btn-primary" >
+        <i class="fa-regular fa-eye" *ngIf="view"></i>  
+        <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+      </button>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+<div class="row bg-white text-dark border-bottom" style="padding-bottom: 100px;" >
+
+  <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+     <h1 class="headers">
+      Source Code
+    </h1>
+  </div>
+
+  <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+    <!-- <h1 class="headers">
+      Source Code
+    </h1> -->
+    <div class="description">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">html</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">app-routing.modules.ts</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">app.module.component.ts</button>
+
+          <button class="nav-link" id="nav-scss-tab" data-bs-toggle="tab" data-bs-target="#nav-scss" type="button" role="tab" aria-controls="nav-scss" aria-selected="false">app.module.component.csss</button>
+         
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+
+          <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+
+            <button (click)="copyText(code)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <!-- <pre class="text-left"> -->
+              <!-- <code [innerHTML]="code"></code> -->
+            <!-- </pre> -->
+            <p>
+              {{code}}
+            </p>
+          </div>
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+
+          <button (click)="copyText(tscode)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre>
+              <code [innerHTML]="tscode"></code>
+            </pre>
+
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+
+          <button (click)="copyText(modulecode)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre>
+              <code [innerHTML]="modulecode"></code>
+            </pre>
+        </div>
+
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-scss" role="tabpanel" aria-labelledby="nav-scss-tab" tabindex="0">
+
+          <button (click)="copyText(cssscode)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+          <span id="codesinppetbutton"></span>
+
+          <pre>
+            <code [innerHTML]="cssscode"></code>
+          </pre>
+
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

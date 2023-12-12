@@ -1,0 +1,170 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+        Event Listners
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+            Event binding lets you listen for and respond to user actions such as keystrokes, mouse movements, clicks, and touches.
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-white text-dark border-bottom mt-2">
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h2 class="headers">
+        Description
+      </h2>
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+          <ul>
+            <li>
+              we use event bing with the bellow snytax
+               <b>{{syntax1}}</b>
+               
+            </li>
+            <li>
+              <b>Example : </b>{{syntax}}
+            </li>
+            <li>
+                Their so many eventListners 
+                <ul>
+                    <li>
+                        <b>Click : </b>after onn click on button its event get trigger.manily we use it in submitting forms. 
+                        <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('databindingid')"  *ngIf="loginIcon"></i>
+                        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('databindingid')" *ngIf="!loginIcon"></i>
+                    
+                  <div class="description" *ngIf="loginTab">
+                    <nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">eventlistner.component.ts</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">eventlistner.component.html</button>
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            
+                        <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+              
+                          <button (click)="copyText(clickts)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <pre class="text-left"> 
+                            <code [innerHTML]="clickts"></code>
+                          </pre>
+                          
+                        </div>
+                      </div>
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+              
+                        <button (click)="copyText(logincomponentts)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+<!--               
+                          <pre>
+                            <code [innerHTML]="logincomponentts"></code>
+                          </pre> -->
+                          <p>{{clickhtml}}</p>
+              
+                      </div>
+                     
+            
+                    </div>
+                  </div>
+                  </li>
+                    <li>
+                        <b>Change : </b>after on change of data of feild event get trigger.
+                         its used in select tag to get the value of options on change
+                         <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('changeId')"  *ngIf="changeIcon"></i>
+                        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('changeId')" *ngIf="!changeIcon"></i>
+                    
+                  <div class="description" *ngIf="changeTab">
+                    <nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home1" type="button" role="tab" aria-controls="nav-home1" aria-selected="true">eventlistner.component.ts</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile1" type="button" role="tab" aria-controls="nav-profile1" aria-selected="false">eventlistner.component.html</button>
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                      <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            
+                        <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+              
+                          <button (click)="copyText(changets)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <pre class="text-left"> 
+                            <code [innerHTML]="changets"></code>
+                          </pre>
+                          
+                        </div>
+                      </div>
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+              
+                        <button (click)="copyText(changehtml)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+<!--               
+                          <pre>
+                            <code [innerHTML]="logincomponentts"></code>
+                          </pre> -->
+                          <p>{{changehtml}}</p>
+              
+                      </div>
+                    </div>
+                  </div> 
+                    </li>
+                    <li>
+                        <b>Search Option : </b> To Get The input value form search button use the ngModel which takes data from ui and binds to service or ts file.
+                        <i class="fa-solid fa-greater-than text-end quesIcon" (click)="toggleQuestion('search_id')"  *ngIf="searchIcon"></i>
+                        <i class="fa-solid fa-chevron-down quesIcon" (click)="toggleQuestion('search_id')" *ngIf="!searchIcon"></i>
+                        <div class="description" *ngIf="searchTab">
+                          <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home2" type="button" role="tab" aria-controls="nav-home2" aria-selected="true">eventlistner.component.ts</button>
+                              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile2" type="button" role="tab" aria-controls="nav-profile2" aria-selected="false">eventlistner.component.html</button>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                            <div class="tab-pane fade show active" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                  
+                              <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+                    
+                                <button (click)="copyText(searchTs)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                                <span id="codesinppetbutton"></span>
+                    
+                                <pre class="text-left"> 
+                                  <code [innerHTML]="searchTs"></code>
+                                </pre>
+                                
+                              </div>
+                            </div>
+                            <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+                    
+                              <button (click)="copyText(serachHtml)" value="click to copy" class="text-left" style="margin-left: 95%;margin-top: 2%;"><i class="fa-regular fa-copy"></i></button>
+                                <span id="codesinppetbutton"></span>
+      <!--               
+                                <pre>
+                                  <code [innerHTML]="logincomponentts"></code>
+                                </pre> -->
+                                <p>{{serachHtml}}</p>
+                    
+                            </div>
+                          </div>
+                        </div> 
+                    </li>
+
+                </ul>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>

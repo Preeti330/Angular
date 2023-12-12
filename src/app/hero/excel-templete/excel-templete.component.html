@@ -1,0 +1,86 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+        Excel Templete
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+           We use ExcelJs to read and manipulate the excel service data , and style to XSLS & JSON, and also we can add row , headers,footers,cells,and merage cells and any xcel actiavites we can do .
+
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+                Import ExcelJs 
+               <i><b>npm install exceljs</b></i>
+                and check this installed package in nodemodule.js and package.json (ex :    "exceljs": "^4.4.0",)
+            </li>
+            <li>
+              Now we can use excel directly in ts file , or we can keep it in service file for reuse
+              <ul>
+                <li>
+                  <b><i>import in excel.component.ts  : </i></b> 
+                </li>
+                <li>
+                  <b><i>mat-sidenav-content : </i></b> represents main contents(and routing path can be loadded here)
+                </li>
+                <li>
+                  <b><i>mat-sidenav : </i></b> repesents the side content (menu list ) , by using #sidenav we can toggle
+                  the menu and also to make side moment of menu "mode=side" and to keep open for default use opened="ture"
+                </li>
+                <li>
+                  <b><i>mat-nav-list : </i></b> use to list the all menu items using mat-item-list
+                </li>
+                <li>
+                  <b><i>mat-toolbar : </i></b> to design toolbar it uses mat-toolbar-row
+                </li>
+                <li>
+                  <b><i>mat-icon-button & mat-icon: </i></b> to design button
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+<div class="row bg-white text-dark border-bottom">
+  <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+    <div class="description">
+      <div class="text"> 
+       <label style="font-size: 18px;font-weight: 500;font-family: system-ui;">Example :</label>
+      <div class="exmaple" *ngIf="condition"  style="padding-left: 31px;">
+       <button (click)="generateTemplete()" class="btn btn-sucess">DownLoad Template</button>
+      </div>
+      <button (click)=OnClick() class="button btn btn-primary" >
+        <i class="fa-regular fa-eye" *ngIf="view"></i>  
+        <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+      </button>
+      </div>
+     
+    </div>
+  </div>
+</div>
