@@ -17,6 +17,7 @@ import { ToasterComponent } from './hero/toaster/toaster.component';
 import { SinglePageaplComponent } from './hero/single-pageapl/single-pageapl.component';
 import { DataTransferComponent } from './hero/data-transfer/data-transfer.component';
 
+
 const routes: Routes = [
   {
     path:"",
