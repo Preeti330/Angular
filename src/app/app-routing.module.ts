@@ -20,7 +20,7 @@ import { DataTransferComponent } from './hero/data-transfer/data-transfer.compon
 const routes: Routes = [
   {
     path:"",
-    redirectTo:"sidebar",
+    redirectTo:"spa",
    // redirectTo:"home",
     pathMatch: 'full'
   },
