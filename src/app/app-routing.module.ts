@@ -9,16 +9,26 @@ import { FormvalidationComponent } from './hero/formvalidation/formvalidation.co
 import { EventListnerComponent } from './hero/event-listner/event-listner.component';
 import { ExcelTempleteComponent } from './hero/excel-templete/excel-templete.component';
 import { ServiceComponent } from './hero/service/service.component';
+import { PromiseandobservablesComponent } from './hero/promiseandobservables/promiseandobservables.component';
+import { HttpRequestComponent } from './hero/http-request/http-request.component'
+import { AuthenticationComponent } from './hero/authentication/authentication.component';
+import { AuthGuard } from 'src/app/services/auth/auth.guard';
+import { ToasterComponent } from './hero/toaster/toaster.component';
+import { SinglePageaplComponent } from './hero/single-pageapl/single-pageapl.component';
+import { DataTransferComponent } from './hero/data-transfer/data-transfer.component';
 
 const routes: Routes = [
   {
     path:"",
     redirectTo:"sidebar",
+   // redirectTo:"home",
     pathMatch: 'full'
   },
   {
-    path:"home",
-    component:LoginComponent
+    path:"login",
+    component:LoginComponent,
+  //  loadChildren: 'AuthenticationComponent',
+    // canActivate:[AuthGuard]
   },
   {
     path:"hero",
@@ -55,6 +65,32 @@ const routes: Routes = [
   {
     path:"services",
     component:ServiceComponent
+  },
+  {
+    path:"promiseandobservables",
+    component:PromiseandobservablesComponent
+  },
+  {
+    path:"httprequest",
+    component:HttpRequestComponent
+  },
+  {
+    path:"auth",
+    component:AuthenticationComponent,
+  //  loadChildren: 'LoginComponent',
+    canActivate:[AuthGuard]
+  },
+  {
+    path:"toaster",
+    component:ToasterComponent
+  },
+  {
+    path:"spa",
+    component:SinglePageaplComponent
+  },
+  {
+    path:"data",
+    component:DataTransferComponent
   }
 ];
 

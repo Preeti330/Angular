@@ -1,0 +1,175 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+        Promise And  Observables
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+        JS having asynchronous and synchronous functions , to deal with asynchronous function js uses promises and observables.
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Asynchronous Functions
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+                JS scripts excutes line by line, but in some cases it wont wait to complete the function excution, so its goes to next line this is called Asynchronous
+              <br>
+            </li>
+            <!-- <li>
+              <ul> -->
+                <li>
+                    i.e java script has both ansyc and syc function , lets in function we declared variable , and the same variable we are using outside the function if the result to excute is taking time than curror will point to next line of code , due to this we get  undefined variable , so while calling any api make them Async i.e wait till it get excute by using promise 
+                </li>
+                <li>in bellow example we are calling a function from that funcation again we are calling another functionn, the second function holds untill the first get excutes </li>
+                <li>
+                    <div class="answer bg-light border-bottom">
+                       
+                    <pre>
+                        <code [innerHtml]="async"></code>
+                    </pre>   
+                     </div>
+                </li>
+              <!-- </ul>
+            </li> -->
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Promise 
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+                promises holds the excution of function untill its completes the excution of funcations.
+            </li>
+            <!-- <li>
+              <ul> -->
+                <li>
+                   promise consumes or produces the code. 
+                </li>
+                <li>promises takes two parms as resolve(on sucess) and reject (on error)  </li>
+                <li>
+                    promise have states and result , 
+                    1.pending -> result as undefined
+                    2.fullfilled -> result as success
+                    3.rejected -> result as fauiler
+                </li>
+                <li>
+                    promises having some set of rules 
+                    1.as we define promise its get loads the data or its get intiate 
+                    2.promise uses the then to call.
+                    3.promise have came for pennding that all have to get resolve as sucess or failuer 
+
+                </li>
+                <li>
+                    and also promises returns only one time.i.e in the bellow i have resolve of three times but ,its returns the result only first resolve
+                </li>
+                <li>
+                    <div class="answer bg-light border-bottom">
+                       
+                    <pre>
+                        <code [innerHtml]="promise"></code>
+                    </pre>   
+                     </div>
+                </li>
+              <!-- </ul>
+            </li> -->
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Observable  
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+               observables waits till they get data form clinet (browser) and then they are excuted or intiated only when we listen or call it.and they return data as they get it form server i.e they may give a chunck of array of user info as they get it form server
+            </li>
+            <!-- <li>
+              <ul> -->
+                <li>angular not have observalales so import it form rxjs and then use </li>
+                <li>
+                    observables also consumes or produces the code. 
+                </li>
+                <li>observables takes parms as subscribe.next to delever the response</li>
+                <li>untill unless we subscribe obersable wont get intiate</li>
+                <li>we can also cacel the observable by unsubsribing </li>
+                <li>observables can excute and return number of times as in bellow out put</li>
+                <li>rxjs has filters , i.e we can apply other functions as pipes on observable lets take filters to filter the data we get from responses</li>
+                <li>
+                    promises having some set of rules 
+                    1.as we define promise its get loads the data or its get intiate 
+                    2.promise uses the then to call.
+                    3.promise have came for pennding that all have to get resolve as sucess or failuer 
+
+                </li>
+                <li>
+                    and also promises returns only one time.i.e in the bellow i have resolve of three times but ,its returns the result only first resolve
+                </li>
+                <li>
+                    <div class="answer bg-light border-bottom">
+                       
+                    <pre>
+                        <code [innerHtml]="obseravlbe"></code>
+                    </pre>   
+                     </div>
+                </li>
+              <!-- </ul>
+            </li> -->
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>

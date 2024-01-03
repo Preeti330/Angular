@@ -18,9 +18,20 @@ import { RoutingComponent } from './hero/routing/routing.component';
 import { FormvalidationComponent } from './hero/formvalidation/formvalidation.component';
 import { EventListnerComponent } from './hero/event-listner/event-listner.component';
 import { ExcelTempleteComponent } from './hero/excel-templete/excel-templete.component';
-import { HTTP_INTERCEPTORS, HttpClientModule, HttpXhrBackend } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpXhrBackend,HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ServiceComponent } from './hero/service/service.component';
+import { PromiseandobservablesComponent } from './hero/promiseandobservables/promiseandobservables.component';
+import {ApiService} from './services/http/api.service';
+import { HttpRequestComponent } from './hero/http-request/http-request.component';
+import { AuthenticationComponent } from './hero/authentication/authentication.component';
+//import {NgToastModule} from 'ng-angular-popup'
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+ import { ToastrModule } from 'ngx-toastr';
+import { ToasterComponent } from './hero/toaster/toaster.component';
+import { SinglePageaplComponent } from './hero/single-pageapl/single-pageapl.component';
+import { DataTransferComponent } from './hero/data-transfer/data-transfer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +44,13 @@ import { ServiceComponent } from './hero/service/service.component';
     FormvalidationComponent,
     EventListnerComponent,
     ExcelTempleteComponent,
-    ServiceComponent
+    ServiceComponent,
+    PromiseandobservablesComponent,
+    HttpRequestComponent,
+    AuthenticationComponent,
+    ToasterComponent,
+    SinglePageaplComponent,
+    DataTransferComponent
   ],
   imports: [
     BrowserModule,
@@ -44,10 +61,15 @@ import { ServiceComponent } from './hero/service/service.component';
     MatListModule,
     MatIconModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+   // NgToastModule
+   ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
     { provide: HttpClientModule, deps: [HttpXhrBackend, Router, Injector] },
+    
+//    { provide: ApiService },
   ],
   bootstrap: [AppComponent]
 })

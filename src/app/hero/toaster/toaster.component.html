@@ -1,0 +1,140 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+       Toaster Notifications
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+            To display error or sucess messages using toast 
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+                toaster msg have error , suceess , warning etc 
+            </li>
+            <li>
+                Install the comptable toatser for angular version 
+                <br>
+                npm install ngx-toastr@13.2.1 --save
+            </li>
+            <li>
+                add the bellow code in angular.json 
+                <div class="question">
+                    <div class="answer bg-light border-bottom">
+                      
+                        <pre>
+                            <code [innerHtml]="factory"></code>
+                        </pre>
+                       
+                    </div>
+                </div>
+            </li>
+            <li>
+                and import ngx-toaster in app-modules.ts 
+            </li>
+            <li>
+                and now in perticular component import toasterservices form ngx-toaster  and use as shown bellow
+            </li>
+        
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+  
+      <div class="description">
+        <div class="text"> 
+         <label style="font-size: 18px;font-weight: 500;font-family: system-ui;">Example :</label>
+        <div class="exmaple" *ngIf="condition" >
+          <video id="video-6" class="video-bg text-center" width="300" height="300" controls autoplay >
+            <source src="assets\toast.mp4" type="video/mp4">
+        </video>
+        </div>
+        <button (click)=OnClick() class="button btn btn-primary" >
+          <i class="fa-regular fa-eye" *ngIf="view"></i>  
+          <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+        </button>
+        </div>
+       
+      </div>
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom" style="padding-bottom: 100px;" >
+
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+       <h1 class="headers">
+        Source Code
+      </h1>
+    </div>
+  
+    <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+      <!-- <h1 class="headers">
+        Source Code
+      </h1> -->
+      <div class="description">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">login.component.ts</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">app.module.ts</button>
+        
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+  
+  
+            <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+  
+              <button (click)="copyText(logints)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+              <span id="codesinppetbutton"></span>
+  
+              <pre class="text-left"> 
+               <code [innerHTML]="logints"></code>
+              </pre>
+              <!-- <p>
+                {{code}}
+              </p> -->
+            </div>
+          </div>
+          <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+  
+            <button (click)="copyText(appmodulets)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+              <span id="codesinppetbutton"></span>
+  
+               <pre>
+                <code [innerHTML]="appmodulets"></code>
+              </pre> 
+              <!-- <p>{{loginhtml}}</p> -->
+  
+          </div>
+      
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiConfiguration } from 'src/app/services/http/api-configuration.service';
+import {ApiService} from 'src/app/services/http/api.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-service',
@@ -13,10 +15,24 @@ export class ServiceComponent implements OnInit {
   serciveIcon=true;
 
   constructor(
-    private apiconfig:ApiConfiguration
+    private apiconfig:ApiConfiguration,
+    private apiService:ApiService,
+    private auth:AuthService
   ) { }
 
   ngOnInit(): void {
+   
+    this.checkApi()
+  //  this.apiService.get(this.apiconfig.createCampaign).subscribe()
+  }
+  public checkApi(){
+   // console.log(this.apiconfig.createCampaign,"prrrrrr")
+    this.apiService.getHeader(this.apiconfig.createCampaign+`?campagin_name=&start_date=&end_date&page=1&download=1`)
+    .subscribe(
+      (res:any)=>{
+        console.log("hii")
+      }
+    )
   }
 
   factory=`

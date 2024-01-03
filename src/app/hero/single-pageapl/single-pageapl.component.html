@@ -1,0 +1,99 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+       Single Page Application
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+          learn about what is single page application examples with explination
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-white text-dark border-bottom mt-2">
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+                single page application here only one html file get loads . 
+            </li>
+            <li>
+                and  dynamically update the data between componets
+            </li>
+            <li>
+                i.e browser dose not allow reload of page due to this its take very less time to redirect to next component and user exprience increase.
+            </li>
+            <li>
+             <b><i>example :</i></b> lets conside you tube or gamil where its loads entire page only once and on base on componet we clicks it update the data . i.e instaed of loading entire page again it loads only perticular component and share the data between components. so by doing this server saves the time loading or sharing new page 
+            </li>
+            <li>
+                <b><i>Multi-Page Loading : </i></b> here for request page get loads i.e 
+                when user sends a request to server it renders to next page by giving another page (next.html ) as response .
+                so bcz of this page loading takes more time and user feels entire application is loading.
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="row bg-white text-dark border-bottom mt-2">
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        How angular excutes or explain entry point of angular  ??
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+               on very first index.html file get loads on browser.
+            </li>
+            <li>
+               which interns calls main.ts file 
+            </li>
+            <li>
+                main.ts file having <b><i>bootstarpModule()</i></b> which means startwithmodule . where bootstarpmodules satrt lodaing AppModule.
+            </li>
+            <li>
+                now it calls app.module.ts file , in this file in bootstrap[AppComponent]
+            </li>
+            <li>
+                app.component.ts files get loads which has selector : [app-root] using selector we load the coponents in angular
+            </li>
+            <li>
+                api-root is loaded in index.html , so on load of angular the very first app.component get loads 
+            </li>
+            <li>
+                and also index ' base href="/" ' which defines routing path is starting form .
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>

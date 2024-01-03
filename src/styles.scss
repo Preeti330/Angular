@@ -1,3 +1,5 @@
+// @import 'ngx-toastr/toastr';
+
 .header{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -27,7 +29,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 18px;
     font-family: system-ui;
     font-weight: 100;
-    width: 900px;
+    width: auto;
   }
   
   .button{
@@ -51,3 +53,85 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .codesinppet{
     padding-left: 3px;
   }
+
+  .codesinppet button{
+    margin-left: 95%;margin-top: 2%;
+  }
+
+  .textAlignment{
+    margin: auto auto;padding-top: 30%;
+  }
+  @media (max-width:480px){
+   
+    .description{
+      max-width: 100%;
+      text-align: justify;
+    }
+    .text{
+      max-width: 95%;
+      text-align: justify;
+    }
+
+  //  .text-left {
+  //     width: 80%;
+  //   }
+
+  .tab-pane button{
+    width: 16%;
+    margin-left: 80%;
+  }
+
+    body{
+      width: 97%;
+    }
+
+    // .text .textAlignment{
+    //   font-size: 31px;
+    // }
+
+ }
+
+@media(max-device-width: 768px) { 
+  /* STYLES HERE */
+
+  .description{
+    max-width: 100%;
+    text-align: justify;
+  }
+  .text{
+    max-width: 95%;
+    text-align: justify;
+  }
+  // .text-left {
+  //   width: 80%;
+  // }
+
+  .tab-pane button{
+      width: 16%;
+    margin-left: 80%;
+  }
+
+  // .textAlignment{
+  //   font-size: 31px;
+  // }
+
+}
+
+// @media(min-device-width: 769px) and (max-device-width:1370) { 
+//   /* STYLES HERE */
+
+//   .description{
+//     max-width: 100%;
+//     text-align: justify;
+//   }
+//   .text{
+//     max-width: 95%;
+//     text-align: justify;
+//   }
+
+//   .tab-pane button{
+//       width: 16%;
+//     margin-left: 0%;
+//   }
+
+// }

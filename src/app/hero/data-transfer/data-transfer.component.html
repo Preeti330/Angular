@@ -1,0 +1,297 @@
+<!-- <p>
+    Today's item: {{item}}
+  </p> -->
+<!-- 
+  <label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button> -->
+
+
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+       Data Transfer Between Components
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+            angular common partern is sharing or transfering data between componets ,its achive using @Input and @Output decorator
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+</div>
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+               Angular can transfer data form parent to child and child to parent . 
+            </li>
+            <li>
+                lets consider a A componet is inside the B component and here we trnsfer data form Parent A to B using @Input decorator , we use the property binding to share data .  
+            </li>
+            <li>
+                in prent to child we can transfer string,number or object data 
+            </li>
+            <li>
+                in child component delcare empty variable using @Input decorator 
+            </li>
+            <li>
+                and in child component display that using string interpolution 
+            </li>
+            <li>
+                here for empty variable assgin the value form parent componet and load the child component in app.component.html 
+            </li>
+            <li>
+                <div class="row bg-white text-dark border-bottom">
+                    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+                  
+                      <div class="description">
+                        <div class="text"> 
+                         <label style="font-size: 18px;font-weight: 500;font-family: system-ui;">Example :</label>
+                        <div class="exmaple" *ngIf="condition" style="padding-bottom: 10%;">
+                          <!-- <video id="video-6" class="video-bg text-center" width="300" height="300" controls autoplay >
+                            <source src="assets\child.png" type="video/mp4">
+                        </video> -->
+                        <img src="assets\child.png" alt="" style="width:300px,height:300px">
+                        </div>
+                        <button (click)=OnClick() class="button btn btn-primary" >
+                          <i class="fa-regular fa-eye" *ngIf="view"></i>  
+                          <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+                        </button>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li>
+                <div class="description">
+                    <nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">child.component.ts</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">child.component.html</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">app.componet.ts</button>
+              
+                        <button class="nav-link" id="nav-scss-tab" data-bs-toggle="tab" data-bs-target="#nav-scss" type="button" role="tab" aria-controls="nav-scss" aria-selected="false">app.componet.html</button>
+        
+                       
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              
+              
+                        <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+              
+                          <button (click)="copyText(childts)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <pre class="text-left"> 
+                           <code [innerHTML]="childts"></code>
+                          </pre>
+                          <!-- <p>
+                            {{code}}
+                          </p> -->
+                        </div>
+                      </div>
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+              
+                        <button (click)="copyText(childhtml)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <!-- <pre>
+                            <code [innerHTML]="tscode"></code>
+                          </pre> -->
+                          <p>{{childhtml}}</p>
+              
+                      </div>
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+              
+                        <button (click)="copyText(appts)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <pre>
+                            <code [innerHTML]="appts"></code>
+                          </pre>
+                      </div>
+              
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-scss" role="tabpanel" aria-labelledby="nav-scss-tab" tabindex="0">
+              
+                        <button (click)="copyText(apphtml)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                        <span id="codesinppetbutton"></span>
+              
+                        <!-- <pre>
+                          <code [innerHTML]="apphtml"></code>
+                        </pre> -->
+
+                        <p>
+                            {{apphtml}}
+                        </p>
+              
+                      </div>
+            
+                    
+                     
+                    </div>
+                  </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      
+
+    </div>
+</div>
+
+
+<div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+               Angular can transfer data form child to parent and every time when data tarnsfer form child to parent , parent compnents get know by event . 
+            </li>
+            <li>
+                i.e while transfering data form child parent we use evnts , EmitEvents which helps in transfering data between components. 
+            </li>
+            <li>
+                here in child having a event function as addItems which is get triger on @Output emmitEvents
+            </li>
+            <li>
+                parents ts file is having the same function and adding data to array and we are listing the data here , but whatever data we add in child class input that all add to the parent list items array .
+            </li>
+            <li>
+                using EventEmmiter we are adding data on every click of child component to parent componet using @OutPut and EventEmmiter
+            </li>
+            <li>
+                <div class="row bg-white text-dark border-bottom">
+                    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+                  
+                      <div class="description">
+                        <div class="text"> 
+                         <label style="font-size: 18px;font-weight: 500;font-family: system-ui;">Example :</label>
+                        <div class="exmaple" *ngIf="condition" style="padding-bottom: 10%;">
+                          <!-- <video id="video-6" class="video-bg text-center" width="300" height="300" controls autoplay >
+                            <source src="assets\child.png" type="video/mp4">
+                        </video> -->
+                        <img src="assets\parent.png" alt="" style="width:300px,height:300px">
+                        </div>
+                        <button (click)=OnClick() class="button btn btn-primary" >
+                          <i class="fa-regular fa-eye" *ngIf="view"></i>  
+                          <i class="fa-regular fa-eye-slash" *ngIf="!view"></i>
+                        </button>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li>
+                <div class="description">
+                    <nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home1" type="button" role="tab" aria-controls="nav-home1" aria-selected="true">child.component.ts</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile1" type="button" role="tab" aria-controls="nav-profile1" aria-selected="false">child.component.html</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact1" type="button" role="tab" aria-controls="nav-contact1" aria-selected="false">app.componet.ts</button>
+              
+                        <button class="nav-link" id="nav-scss-tab" data-bs-toggle="tab" data-bs-target="#nav-scss1" type="button" role="tab" aria-controls="nav-scss1" aria-selected="false">app.componet.html</button>
+        
+                       
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+                      <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              
+              
+                        <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+              
+                          <button (click)="copyText(childts1)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <pre class="text-left"> 
+                           <code [innerHTML]="childts1"></code>
+                          </pre>
+                          <!-- <p>
+                            {{code}}
+                          </p> -->
+                        </div>
+                      </div>
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+              
+                        <button (click)="copyText(childhtml1)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <!-- <pre>
+                            <code [innerHTML]="tscode"></code>
+                          </pre> -->
+                          <p>{{childhtml1}}</p>
+              
+                      </div>
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact1" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+              
+                        <button (click)="copyText(appts1)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                          <span id="codesinppetbutton"></span>
+              
+                          <pre>
+                            <code [innerHTML]="appts1"></code>
+                          </pre>
+                      </div>
+              
+                      <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-scss1" role="tabpanel" aria-labelledby="nav-scss-tab" tabindex="0">
+              
+                        <button (click)="copyText(apphtml1)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+                        <span id="codesinppetbutton"></span>
+              
+                        <!-- <pre>
+                          <code [innerHTML]="apphtml"></code>
+                        </pre> -->
+
+                        <p>
+                            {{apphtml1}}
+                        </p>
+              
+                      </div>
+        
+                    </div>
+                  </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      
+
+      
+
+    </div>
+</div>

@@ -15,7 +15,13 @@ export class ApiConfiguration {
 
   //campaign
   //create-campaign
-  createCampaign = this.baseUrl + "/hubadmin/create-campaign"
+  createCampaign = this.baseUrl + "/hubadmin/get-campaign"
+
+  //post 
+  updateVoucherCode=this.baseUrl + "/hubadmin/updatevouchercode";
+
+  //upload 
+  uploadVouchers=this.baseUrl +"/hubadmin/upload-voucher-code"
   
 }
 export interface ApiConfigurationInterface { }

@@ -20,14 +20,19 @@ export class AngularbasicsComponent implements OnInit {
   databindingIcon=true;
   dIAnswer=false;
   dIIcon=true;
+  directive=false;
+  directiveIcon=true;
+  pipeAnswer=false;
+  pipeIcon=true;
 
   data="{{}}";
   className='text-danger';
+  className2='text-success';
   hasError=true;
   size='30px';
   styleClass={
     'text-danger':this.hasError,
-    'text-sucess':!this.hasError,
+    'text-success':!this.hasError,
     'text-size':this.size
   }
 
@@ -103,6 +108,30 @@ export class AngularbasicsComponent implements OnInit {
   }
   `;
 
+  classbindingex=`
+      <h7 [class]="className">  [class]=className </h7>
+      <h7 [class.text-danger]="hasError">[class.text-danger]="hasError"</h7>
+      <h7 [ngClass]="styleClass">[ngClass]="styleClass"</h7>
+
+
+      //in .ts file
+      className='text-danger';
+      hasError=true;
+      size='30px';
+      styleClass={
+        'text-danger':this.hasError,
+        'text-sucess':!this.hasError,
+        'text-size':this.size
+      }
+  
+  `;
+
+  classbindwithcond=`
+    <p [ngClass]="hasError?className:className2">Apply Class Binding on condtion </p>
+    className='text-danger';
+    className2='text-success';
+  `;
+
   constructor(
     private apiconfig : ApiConfiguration
   ) { }
@@ -111,7 +140,7 @@ export class AngularbasicsComponent implements OnInit {
   }
 
   toggleQuestion(id:any){
-    console.log(id);
+    console.log(id,"prrrr");
 
     if(id=='ngmodelid'){
       if(this.ngModuleAnswer==true){
@@ -210,6 +239,35 @@ export class AngularbasicsComponent implements OnInit {
         this.dIIcon=true;
       }
 
+    }else if(id='directiveid'){
+      if(this.directive==true){
+        this.directive=false;
+      
+      }else if(this.directive==false){
+        this.directive=true;
+      }
+  
+      if(this.directiveIcon==true){
+        this.directiveIcon=false;
+      }else if(this.directiveIcon==false){
+       // this.showAnswer=true;
+        this.directiveIcon=true;
+      }
+    }else if(id='pipeid'){
+
+      if(this.pipeAnswer==true){
+        this.pipeAnswer=false;
+      
+      }else if(this.pipeAnswer==false){
+        this.pipeAnswer=true;
+      }
+  
+      if(this.pipeIcon==true){
+        this.pipeIcon=false;
+      }else if(this.pipeIcon==false){
+       // this.showAnswer=true;
+        this.pipeIcon=true;
+      }
     }
 
 

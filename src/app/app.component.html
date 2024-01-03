@@ -37,14 +37,20 @@
 </div> -->
 
 
-<mat-toolbar color="primary">
+<!-- <app-data-transfer [item]='item'></app-data-transfer> -->
+<!-- <app-data-transfer (newItemEvent)="addItem($event)"></app-data-transfer>
+
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul> -->
+
+<mat-toolbar color="primary" >
     <mat-toolbar-row>
       <h1>Angular</h1>
       <button mat-icon-button>
         <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
       </button>
-     
-      <!-- <span class="menu-spacer"></span> -->
+    
     </mat-toolbar-row>
   
   </mat-toolbar>
@@ -52,18 +58,21 @@
   <mat-sidenav-container>
     <mat-sidenav #sidenav style="width: 300px;" opened="true" mode="side">
       <mat-nav-list>
-        <a mat-list-item aria-current="page" routerLink="sidebar" routerLinkActive="active"> Side Bar Menu </a>
+        <a mat-list-item routerLink="spa">SPA </a>
         <a mat-list-item routerLink="angularbasics"> Angular Basics </a>
+        <a mat-list-item routerLink="data">Data Transfer Between Components</a>
+        <a mat-list-item aria-current="page" routerLink="sidebar" routerLinkActive="active"> Side Bar Menu </a>
         <a mat-list-item routerLink="routing"> Routing </a>
         <a mat-list-item routerLink="formvalidation"> Form Validtaions </a>
         <a mat-list-item routerLink="eventlistner"> Event Listner </a>
         <a mat-list-item routerLink="exceltemplete">Excel Templete</a>
         <a mat-list-item routerLink="services">Services</a>
-        <!-- <a mat-list-item> Activities </a>
-        <a mat-list-item> Create Activity </a> -->
-        <!-- <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item
-          >Close</a
-        > -->
+        <a mat-list-item routerLink="promiseandobservables">Promise And Observables</a>
+        <a mat-list-item routerLink="httprequest">Http Request</a>
+        <a mat-list-item routerLink="login">Angular Authonication</a>
+        <a mat-list-item routerLink="toaster">Toaster Notifications</a>
+
+        <a mat-list-item routerLink=""></a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -73,4 +82,8 @@
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
+
+  <!-- <lib-ng-toast>
+
+  </lib-ng-toast> -->
   

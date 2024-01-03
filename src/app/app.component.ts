@@ -8,4 +8,12 @@ import { LoginComponent } from './Login/login/login.component';
 })
 export class AppComponent {
   title = 'Angular';
+ // item='Data Transfer'
+
+  items = ['item1', 'item2', 'item3', 'item4'];
+
+  addItem(newItem: string) {
+    console.log(newItem)
+    this.items.push(newItem);
+  }
 }

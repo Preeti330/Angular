@@ -1,0 +1,187 @@
+<div class="row bg-white text-dark border-bottom">
+    <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+      <h1 class="headers">
+       Http/Https Requests
+      </h1>
+      <div class="description">
+        <!-- <div class="text"> -->
+        <p>
+          here , to get data form server and to post data to server and dealing with headers.
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-white text-dark border-bottom mt-2">
+
+    <div class="col-12 col-sm-12 col-md-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+
+      <h2 class="headers">
+        Description
+      </h2>
+
+      <div class="description">
+        <div class="text">
+          <!-- <p>
+            
+          </p> -->
+
+          <ul>
+            <li>
+                in services we are importing the apiConfigration , their we have imported HttpModules in appi.modukes.ts file , so now its not needed to import again , 
+            </li>
+            <li>
+             import HttpClientModule in app.module.ts as 
+             <div class="answer bg-light border-bottom">
+                      
+                <pre>
+                    <code [innerHtml]="HcModule"></code>
+                </pre>
+               
+            </div>
+            </li>
+            <li>
+             this httpClientModules having HttpResponse,HttpClients,HttpHeaders this helps to modify the request headers , and send the request and deal with response.
+             </li>
+             <li>
+                the request goes form client is HTTPREquest (having async methods) to server and server get loads and give the response as observable so its needed to subscribe the methods to get response.
+             </li>
+             <li>
+                here we can set headers request type as json/text and we add authorizations parms to headers .
+             </li>
+             <li> 
+              <ul>
+                <li>
+                  <b><i>headers : </i></b> sets the headers request like request type,and append the other data as key values pair and we retrive the data using key .
+                </li>
+                <li>
+                    in every request we send url and in currly bracess we send the bellow data
+                  <b><i>observe : </i></b> this gives complete response , i.e when we not set observe , we may get only the resopnse json . by setting observe it makes easier to work flow  
+                </li>
+                <li>
+                  <b><i>params : </i></b> we send the parms here , for get request 
+                </li>
+                <li>
+                  <b><i>responseType </i></b> which defines the response we have to get in which format
+                </li>
+                <li>
+                    <b><i>reportProgress : </i></b> to upload reports or exccel sheets / files , we can use post methods directly send the data else by keeping <b><i>reportProgress : ture,"observe":"event"</i></b> 
+                    <br>
+                    reportProgress : ture, keeps track of progracess and to get all events with progress we have to set observe to event 
+                  </li>
+              </ul>
+            </li>
+            <li>
+                headers we set as 
+                <div class="answer bg-light border-bottom">
+                      
+                    <pre>
+                        <code [innerHtml]="headers"></code>
+                    </pre>
+                   
+                </div>
+            </li>
+            <li>
+                <b><i>pipes : </i></b> pipes in observable uses the map,filter to add or modify or fetch perticular data . here in bellow example using pipes of catchError throw error msg if API get fails.
+                <br>
+                <b>throwError : </b> this function is imported form rxjs to throw an error message
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+
+<div class="row bg-white text-dark border-bottom" style="padding-bottom: 100px;" >
+
+  <div class="col-12 text-left " style="margin-top: 2%;padding-left: 4%;">
+     <h1 class="headers">
+      Source Code
+    </h1>
+    <div>
+        <ul>
+            <li>
+                in bellow source code , i have created service to write all the request methods and in component.ts file i have reused the apiservice file and called the peaticular api ,by passing headers as well as parms and storted that data in variable
+            </li>
+            <li>
+                create api.service.ts file under app/src/service/api.service.ts
+            </li>
+            <li>
+                and here i have one more file as api-configrataion.service.ts file here i have listed the url of api 
+            </li>
+            <li>
+                in the component.ts file i have taken examples of form validation , update ,upload and immplemented that apis in this section , to pass data as json.form data check the form validation code for 
+                (upload form and update form)
+            </li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="col-10 text-left" style="margin-top: 1%;padding-left: 4%;margin: auto;">
+    
+     <div class="description">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">api-configartion.ts</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">api.service.ts</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">login.component.ts</button>
+<!-- 
+          <button class="nav-link" id="nav-scss-tab" data-bs-toggle="tab" data-bs-target="#nav-scss" type="button" role="tab" aria-controls="nav-scss" aria-selected="false">app.module.component.csss</button> -->
+         
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent" style="padding-top: 3px;">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+
+          <div class="codesinppet bg-dark text-left text-white" id="codesinppet" >
+
+            <button (click)="copyText(apiConfig)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre class="text-left"> 
+              <code [innerHTML]="apiConfig"></code>
+            </pre>
+        
+          </div>
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+
+          <button (click)="copyText(apiService)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre>
+              <code [innerHTML]="apiService"></code>
+            </pre>
+
+        </div>
+        <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+
+          <button (click)="copyText(modulecode)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+            <span id="codesinppetbutton"></span>
+
+            <pre>
+              <code [innerHTML]="modulecode"></code>
+            </pre>
+        </div>
+
+        <!-- <div class="tab-pane fade codesinppet bg-dark text-left text-white" id="nav-scss" role="tabpanel" aria-labelledby="nav-scss-tab" tabindex="0">
+
+          <button (click)="copyText(cssscode)" value="click to copy" class="text-left" ><i class="fa-regular fa-copy"></i></button>
+          <span id="codesinppetbutton"></span>
+
+          <pre>
+            <code [innerHTML]="cssscode"></code>
+          </pre>
+
+        </div> -->
+       
+      </div>
+    </div> 
+  </div>
+</div>
